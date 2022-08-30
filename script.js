@@ -17,3 +17,17 @@ $(document).ready(function(){
         }
     })
 })
+
+function sendemail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "sahadmuhammedkm123@gmail.com",
+        Password : "sajamajeed",
+        To : 'muhammedsahadkm28480@gamil.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Enquiry",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}
